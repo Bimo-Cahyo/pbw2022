@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <hi> kelinci gemuk </hi>
+    <p>
+        <button type="button" onclick="playVid()">Play Video</button>
+        <button type="button" onclick="pauseVid()">Pause Video</button>
+        <button>Duration</button>
+        <button>Control ON</button>
+        <button>Control OFF</button>
+    </p>
+    <video width="420" id="myVideo">;
+        <source src="movie/kelinci.mp4" type="video/mp4">
+        anda tidak mendukung
+    </video>
+</body>
+<script>
+		var vid = document.getElementById("myVideo");
+		function playVid() {
+			vid.play();
+			vid.loop = true;
+		}
+		function pauseVid() {
+			vid.pause();
+		}
+		function duration() {
+			alert(vid.duration);
+		}
+		function controlOn(){
+			vid.controls = true;
+			vid.load();
+		}
+		function controlOf(){
+			vid.controls = false;
+			vid.load();
+		}
+    </script>
+</html>
