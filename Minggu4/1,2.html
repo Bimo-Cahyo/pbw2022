@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form HTML 5</title>
+</head>
+<body>
+	<h2>Form MHS</h2>
+	<form name="fmhs" action="proses.php" method="post">
+		<table width="50%">
+			<tr>
+				<td>Nim</td>
+				<td><input type="number" name="fnim" required></td>
+			</tr>
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" name="fnama" required></td>
+			</tr>
+			<tr>
+				<td>Program Studi</td>
+				<td>
+					<select name="fprodi" required>
+						<option value="">Pilih</option>
+						<option value="a11">Teknik Informatika- S1</option>
+						<option value="a12">Sistem Informasi - S1</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit"><input type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

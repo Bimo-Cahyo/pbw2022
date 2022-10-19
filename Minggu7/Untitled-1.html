@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form - HTML 5</title>
+	</head>
+	<body>
+		<h3>Form Mahasiswa</h3>
+		<form id="form1" name="form1" method="post" action="kirim.php">
+		<table>
+			<tr>
+				<td>Nim</td>
+				<td><input type="number" name="fnim" required></td>
+			</tr>
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" name="fnama" required></td>
+			</tr>
+			<tr>
+				<td>Program Studi</td>
+				<td>
+					<select name="fprodi" required>
+						<option value="">Pilih Program Studi</option>
+						<option value="A11">S1 - Teknik Informatika</option>
+						<option value="A12">S1 - Sistem Informasi</option>
+						<option value="A22">D3 - Teknik Informatika</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Tgl Lahir</td>
+				<td><input type="date" name="ftgl_lhr" required></td>
+			</tr>
+			<tr>
+				<td>Bidang Minat</td>
+				<td>
+					<input type="checkbox" name="hobby1" value="101">
+					<label for="hobby1">Web Developer</label><br>
+					<input type="checkbox" name="hobby2" value="102">
+					<label for="hobby2">Mobile Developer</label><br>
+					<input type="checkbox" name="hobby3" value="103">
+					<label for="hobby3">Data Science</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Lamp. Sertifikat</td>
+				<td><input type="file" name="ffile"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="fkirim" value="Kirim"></td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
