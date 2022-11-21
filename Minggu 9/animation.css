@@ -1,0 +1,20 @@
+body{
+    background: #7de87f;
+    font-family: roboto;
+    color: rgb(0, 0, 0);
+}
+h1{
+    width: 550px;
+}
+.kotak{
+    background: rgb(61, 1, 171);
+    width: 200px;
+    height: 200px;
+    animation-name: animasi_kotak;
+    animation-duration: 2s;
+}
+    @keyframes animasi_kotak{
+    from{ background: rgb(169, 8, 249);}
+    to{background: rgb(137, 211, 106);}
+    to{background: rgb(0, 254, 250);}
+}
