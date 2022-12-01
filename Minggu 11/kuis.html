@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Javascript</title>
+</head>
+
+<body>
+    <h3>Daftar Nama Mawapres 2023</h3>
+    <form onsubmit="app.addMhs()" action="javascript:void(0);" method="post">
+        <input type="text" placeholder="Input Nama MHS" id="tambahMhs">
+        <input type="submit" value="+">
+    </form>
+    <div id="counter">
+        <!-- Nilai Dinamis (Javascript) -->
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Data Mawapres 2023</td>
+            </tr>
+        </thead>
+        <tbody id="daftarNama">
+            <!-- Nilai Dinamis (Javascript) -->
+        </tbody>
+    </table>
+    <script>
+        var app = new function () {
+            this.mhs = ['Robert', 'Jonathan', 'Christ'];
+            this.dt = document.getElementById('daftarNama');
+
+            this.barisAll = function () {
+                var data = '';
+
+                if (this.mhs.length > 0) {
+                    for (i = 0; i < this.mhs.length; i++) {
+                        data += '<tr>';
+                        data += '<td>' + this.mhs[i] + '  <input type="button" value="Del">';
+                        data += '</td></tr>';
+                    }
+                }
+                this.count(this.mhs.length);
+                return this.dt.innerHTML = data;
+            };
+
+            this.count = function (data) {
+                var el = document.getElementById('counter');
+                if (data) {
+                    el.innerHTML = 'Jumlah: ' + data + ' ' + 'Mahasiswa';
+                } else {
+                    el.innerHTML = 'Data Kosong';
+                }
+            };
+
+            this.addMhs = function () {
+                // Tambah MHS
+            }
+
+        }
+        app.barisAll();
+    </script>
+</body>
+</html>
