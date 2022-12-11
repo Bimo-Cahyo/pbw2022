@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img/h.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.gsce {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.drop {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.75s;
+    margin: 0 5px;
+}
+
+.navbar ul li a:hover {
+    color: #11101b;
+    background-color: #fefefe;
+}
+
+.navbar ul li a.active {
+    color: #11101b;
+    background-color: #fefefe;
+}
+
+@media only screen and (max-width: 1920px) {
+    header {
+        padding: 0 50px;
+    }
+
+    .join {
+        position: absolute;
+        bottom: 115px;
+        right: 115px;
+    }
+}
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 30px;
+    }
+
+    a {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .drop {
+        display: block;
+        cursor: pointer;
+
+    }
+    .drop .line {
+        width: 30px;
+        height: 3px;
+        background-color: #fefefe;
+        margin: 6px 0;
+    }
+
+    .navbar {
+        position: absolute;
+        height: 0;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 100vw;
+        background: #11101b;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .navbar.active {
+        height: 450px;
+    }
+
+    .timer.active {
+        display: none;
+        transition: 1s;
+    }
+
+    .navbar.active ul {
+        opacity: 1;
+    }
+
+    .navbar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .navbar ul li a {
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    a {
+        display: none;
+    }
+
+    section {
+        margin-top: -50px;
+    }
+
+    .join {
+        margin-right: -50px;
+        margin-bottom: -50px;
+    }
+
+    .join.active {
+        margin-right: -50px;
+        margin-bottom: -50px;
+        transition: 0.5s;
+    }
+
+    .discord.active {
+        margin-right: -50px;
+        margin-bottom: -50px;
+        transition: 0.5s;
+        transform: translateY(-125%);
+    }
+
+}
+
+
+section {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 40%;
+    top: 200px;
+    left: 50px;
+    padding: 30px 0px 0px 0px;
+    background-color: #11101b;
+    text-align: center;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -25px;
+    
+}
+
+#status {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.join {
+    font-size: 30px;
+    font-weight: bold;
+    color: #11101b;
+    position: absolute;
+    display: flex;
+    height: 60px;
+    width: 200px;
+    right: 115px;
+    bottom: 115px;
+    justify-content: center;
+    padding-top: 13px;
+    background-color: #fefefe;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.join:hover {
+    background-color: #11101b;
+    color: #fefefe;
+}
+
+.join.active {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    bottom: 105px;
+    right: 115px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fefefe;
+    color: #11101b;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 10px;
+    transition: 0.75s;
+}
+
+.discord {
+    opacity: 0;
+    z-index: -1;
+    height: 60px;
+    width: 60px;
+    bottom: 115px;
+    right: 115px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #7289da;
+    color: #fefefe;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+
+.discord.active {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    transition: 0.5s;
+    height: 80px;
+    width: 80px;
+    transform: translateY(-125%);
+}
